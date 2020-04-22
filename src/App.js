@@ -16,7 +16,7 @@ function App () {
   useEffect(() => {
     getRecipes();
   }, [query]);
-  
+
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
@@ -36,10 +36,9 @@ function App () {
 
   return (
     <div className="container-fluid">
-        React
       <ContextState />
-      <nav class="navbar navbar-light bg-light mb-5 mt-2">
-        <a class="navbar-text">Ivesti ingredienta</a>
+      <nav class="navbar navbar-light bg-light mb-3 ">
+        <h3 class="alert alert-success">Enter Ingredient</h3>
         <form onSubmit={getSearch} className='form-inline'>
           <input onChange={updateSearch}
             className='form-control mr-sm-2'
