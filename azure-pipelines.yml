@@ -15,12 +15,6 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: Npm@1
-  inputs:
-    command: publish
-    publishRegistry: azure-feed://lukaskuprys/lukaskuprys@Local
-    publishFeed: REC.IO
-
 - script: |
     npm install
     npm run build
