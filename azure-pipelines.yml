@@ -16,10 +16,11 @@ steps:
   displayName: 'Install Node.js'
 
 - task: Npm@1
+  displayName: 'npm install'
   inputs:
-    command: publish
-    publishRegistry: azure-feed://lukaskuprys/lukaskuprys@Local
-    publishFeed: REC.IO/app2
+    verbose: false
+    customRegistry: useFeed
+    customFeed: registry
 
 - script: |
     npm install
