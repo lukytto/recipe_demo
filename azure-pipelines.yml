@@ -18,8 +18,8 @@ steps:
 - task: Npm@1
   inputs:
     command: publish
-    publishRegistry: useFeed
-    publishFeed: projectName/feedName
+    publishRegistry: azure-feed://lukaskuprys/lukaskuprys@Local
+    publishFeed: lukaskuprys
 
 - script: |
     npm install
