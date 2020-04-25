@@ -19,7 +19,7 @@ steps:
   inputs:
     command: publish
     publishRegistry: azure-feed://lukaskuprys/lukaskuprys@Local
-    publishFeed: lukaskuprys
+    publishFeed: REC.IO
 
 - script: |
     npm install
